@@ -599,5 +599,8 @@ for i in range(len(list_)):
                         maze_copy[str((ix,iy))]=maze_copy[(ix,iy)]
                         del maze_copy[(ix,iy)]
                         filename2 = f'string_maze_to_copy{ix,iy}.txt'
-                        with open(filename2, 'w') as f:
-                                f.write(str(list([maze_copy,maze.start,maze.end,maze.treasure])))
+                        #with open(filename2, 'w') as f:
+                        #        f.write(str(list([maze_copy,maze.start,maze.end,maze.treasure])))
+                                
+with open("Maze_sample.txt", 'w') as f:
+        f.write(str(list([maze_copy,maze.start,maze.end,maze.treasure])))
