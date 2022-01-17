@@ -47,7 +47,7 @@
   When we have the state, if it's a New state, We initialize : Q[self.state] = [0] * len of actions space (=11 in our case). After setting up our Q_hash we just have to use belleman equation and Q learning temporal difference to udapte our Q_hash.
   </p>
   <p align = left>Actually our algorithm does not really generate an infinite number of maze since we always give the same labyrinth at the beginning with all the walls closed,
-Only the position of the agent at the beggening differ froms one game to an other and there is only 16 possibles differents starting location for the agent.
+only the position of the agent at the beggening differ from one game to an other and there is only 16 possible differents starting location for the agent.
 Thus, our AI generates only a small number of different maze given our algorithm. But this is not a problem, we just need to make some modifications to have an "infinite" number of maze.
 One solution could be to randomly select a starting state in Q_hash.keys() (we can only start with a state already visited). </p>
 <p align = left> This IA most of time gives good enough maze but sometime they are pretty "bad". To improve this we can "play" with the parameters of your game like the gamma factor, discount factor, the number of games played, the number of step by game etc..
