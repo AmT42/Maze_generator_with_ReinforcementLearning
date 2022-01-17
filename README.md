@@ -18,7 +18,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![LinkedIn][linkedin-shield]][linkedin-url](https://www.linkedin.com/in/ahmet-celebi-973b63197/)
+[@Linkedin](https://www.linkedin.com/in/ahmet-celebi-973b63197/)
 
 
 
