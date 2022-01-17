@@ -558,20 +558,46 @@ if __name__ == "__main__":
         maze.reset()
         
     
-    """
-    Testing our AI
-    """
-    maze.reset()
+"""
+Testing our AI
+Our algorithm does not really generate an infinite number of maze since we always give the same maze at the beginning with all the walls that are closed,
+only the position of the agent in the beggening differ froms one game to an other but there is only 16 possibles differents starting pos for the agent.
+Thus, our AI generates only a small number of different maze given our algorithm. But this is not a problem, we just need to make some modifications to have an "infinite" number of maze.
+One solution could be to randomly select a starting state in Q_hash.keys() (we can only start with a state already visited). 
+"""
 
-    for step in range(500):
-            ## choose best action with respect to current Q table
-            current_action_index = maze.take_actions(0)
-            ## update state with respect to  the current best action 
-            maze.update_states(current_action_index)
-            
-    # print(maze.__str__()) 
-    print(f'start : {maze.start} end : {maze.end} treasure : {maze.treasure}')
-    maze.write_svg("test_script.svg")  
-    print(maze.BFS(maze.start,maze.end))
-    print(maze.BFS(maze.start,maze.treasure))
-    print(maze.BFS(maze.treasure,maze.end))
+"""
+Testing our AI
+Our algorithm does not really generate an infinite number of maze since we always give the same maze at the beginning with all the walls that are closed,
+only the position of the agent in the beggening differ froms one game to an other but there is only 16 possibles differents starting pos for the agent.
+Thus, our AI generates only a small number of different maze given our algorithm. But this is not a problem, we just need to make some modifications to have an "infinite" number of maze.
+One solution could be to randomly select a starting state in Q_hash.keys() (we can only start with a state already visited). 
+"""
+list_=[]
+for x in  range(maze.rows): 
+        for y in range(maze.cols) :
+                maze.reset()
+                maze.ix, maze.iy = x,y
+                for step in range(500):
+                        ## choose best action with respect to current Q table
+                        current_action_index = maze.take_actions(0)
+                        ## update state with respect to  the current best action 
+                        maze.update_states(current_action_index)
+                filename1 = f'maze{maze.ix,maze.iy}.svg'
+                maze.write_svg(filename1) 
+                list_.append(maze)
+                
+### this part will be use in our React graphic interphace
+for i in range(len(list_)):
+        maze_copy = list_[i].maze_map.copy()
+        for ix in  range(maze.rows): 
+                for iy in range(maze.cols):
+                        print(ix,iy)
+                        ### this part will be use in our React graphic interphace
+                        for d in 'EWSN':
+                                maze_copy[(ix,iy)][d]=str(maze_copy[(ix,iy)][d])
+                        maze_copy[str((ix,iy))]=maze_copy[(ix,iy)]
+                        del maze_copy[(ix,iy)]
+                        filename2 = f'string_maze_to_copy{ix,iy}.txt'
+                        with open(filename2, 'w') as f:
+                                f.write(str(list([maze_copy,maze.start,maze.end,maze.treasure])))
