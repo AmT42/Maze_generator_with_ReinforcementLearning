@@ -127,8 +127,8 @@ Project Link: [https://github.com/AmT42/map_generator](https://github.com/AmT42/
 ## Acknowledgments
 
 * [Hector Roussille](https://www.linkedin.com/in/hectorroussille/)
-* [Philip Bontrager]
-* [Ahmed Akhalifa]
+* [Philip Bontrager](https://twitter.com/FilipoGiovanni)
+* [Ahmed Akhalifa](ahmed@akhalifa.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
