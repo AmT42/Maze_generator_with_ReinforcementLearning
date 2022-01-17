@@ -48,7 +48,7 @@
   </p>
   <p align = left>Actually our algorithm does not really generate an infinite number of maze since we always give the same labyrinth at the beginning with all the walls closed,
 only the position of the agent at the beggening differ from one game to an other and there is only 16 possible differents starting location for the agent.
-Thus, our AI generates only a small number of different maze given our algorithm. But this is not a problem, we just need to make some modifications to have an "infinite" number of maze.
+Thus, presented as follows our AI is able to generates only a small number of different maze. But this is not a problem, we just need to make some little modifications to make him able to make an "infinite" number of mazes.
 One solution could be to randomly select a starting state in Q_hash.keys() (we can only start with a state already visited). </p>
 <p align = left> This IA most of time gives good enough maze but sometime they are pretty "bad". To improve this we can "play" with the parameters of your game like the gamma factor, discount factor, the number of games played, the number of step by game etc..
 But I think to make the algorithm much better it's to reduce the len of space states to 10 000 or 20 000 states using symetry or similarity detection. Maybe DeepQN could gives better result too since he handle by himself the curse of dimensionality </p>
