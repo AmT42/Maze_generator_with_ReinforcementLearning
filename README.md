@@ -18,7 +18,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[@Linkedin](https://www.linkedin.com/in/ahmet-celebi-973b63197/)
 
 
 
@@ -63,7 +62,6 @@ But I think to make the algorithm much better we have to reduce the len of space
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
- `AmT42`, `map_generator`, `ahmet-celebi-973b63197`, `Ahmet_Celebi@hotmail.fr`, `Q-learning map generator`,
 
 
 
@@ -116,9 +114,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Ahmet CELEBI - [@Linkedin](https://www.linkedin.com/in/ahmet-celebi-973b63197/) - Ahmet_celebi@hotmail.fr
 
-Project Link: [https://github.com/AmT42/map_generator](https://github.com/AmT42/map_generator)
 
 
 
